@@ -1,0 +1,84 @@
+/* Flex Container */
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Adjust this as needed */
+  padding: 5px;
+  gap: 5px; /* Space between flex items */
+  background-color: transparent; /* Example background color */
+  margin-top: 40px;
+  height: 50vh;
+}
+
+/* Profile Card */
+.profile-card {
+  width: 30%; /* Occupies 35% of the flex container */
+  text-align: center;
+  background-color: rgba(235,228,214,255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the items for smaller widths */
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Profile Photo */
+.profile-photo {
+  width: 100%; /* Fixed size, adjust based on design needs */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 5px solid rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card:hover .profile-photo {
+  transform: scale(1.05);
+}
+
+
+
+/* Right Box CSS with Hover Effect */
+.right-box {
+  width: 65%; /* Takes up the remaining space if the profile card is 35% */
+  background-color: rgba(255,255,245,255); /* Dark background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover */
+}
+
+.right-box:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-weight: bold;
+  color: rgba(160,135,116,255);
+  font-size: xx-large;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: regular;
+  color:rgba(151,135,116,255);
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: regular;
+  color: rgba(6,20,28,255);
+}

@@ -1,0 +1,23 @@
+.scroll {
+    max-width: 800px;
+    background: url('../media/scroll.jpg') no-repeat center center;
+    background-size: 100vh;
+    padding: 10px 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* New class for animation */
+  .animate-scroll {
+    animation: scrollUnveil 2s ease forwards;
+  }
+  
+  @keyframes scrollUnveil {
+    from { max-height: 0; }
+    to { max-height: 2500px; } /* Adjust as necessary */
+  }
+  

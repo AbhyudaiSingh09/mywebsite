@@ -1,0 +1,53 @@
+
+
+.flex-container2 {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Creates space between flex items */
+}
+
+.box {
+    flex: 1; /* Makes each box take equal width */
+    padding-top : 5px; /* Padding inside each box */
+    text-align: center; /* Centers text inside the box */
+    height: 30vh;
+    display: flex;
+    justify-content: center; /* Center the inner box horizontally */
+    align-items: center; /* Center the inner box vertically */
+    position: relative; /* Ensures proper positioning of the inner box */
+    color: white;
+}
+
+.box:nth-child(odd) {
+    background-color: rgba(13,17,22,255);
+    color: white;
+  }
+  
+  /* This targets even boxes */
+.box:nth-child(even) {
+    background-color: rgba(255,255,245,1);
+    color: black;
+  }
+
+.inner-box {
+    width: 100%; /* Smaller width compared to the parent box */
+    height: 90%; /* Smaller height compared to the parent box */
+    text-align: center; /* Centers text within the inner box */
+    border-radius: 20%;
+    font-family: 'Brush Script MT', cursive;
+}
+  
+
+
+.profile-card:hover .inner-box {
+    transform: scale(1.05);
+  }
+
+.img-rounded {
+    border-radius: 20px;
+  }
+
+
+

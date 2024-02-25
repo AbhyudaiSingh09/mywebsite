@@ -1,0 +1,21 @@
+.frames-container {
+    padding: 10%;
+    display: flex;
+    justify-content: center; /* Aligns the photo frames in the center horizontally */
+    gap: 100px; /* Creates space between the frames */
+  }
+
+  .photo-frame {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 10px solid #fff;
+    padding: 7px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    flex: 0 0 300px; /* Don't grow, don't shrink, start at 300px */
+  }
+
+  .photo-frame img {
+    display: block;
+    width: 40vh;
+    height: 50vh;
+  }

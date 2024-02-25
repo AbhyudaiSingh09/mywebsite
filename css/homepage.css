@@ -1,0 +1,43 @@
+/* Add this to your styles.css file */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255,255,245,255);
+  }
+  
+  .navbar {
+    background-color: rgba(187,176,159,255); /* Light peach background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow to navbar */
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navbar items horizontally */
+    align-items: center;
+    height: 60px; /* Set the height of the navbar */
+  }
+  
+  .nav-links li {
+    padding: 0 20px; /* Add padding to each navbar item */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgba(255,252,252,255); /* Dark text for the links */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links li .active {
+    color: #4CAF50; /* Change as needed */
+  }
+
+  
+  .nav-links a:hover {
+    color:rgba(27,32,29,255); /* Change color on hover */
+  }
+  

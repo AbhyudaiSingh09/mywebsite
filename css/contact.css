@@ -1,0 +1,59 @@
+.big-box {
+    position: relative; /* Establish a positioning context */
+    display: flex;
+    justify-content: start; /* Align items to the start (left) */
+    align-items: end; /* Align items to the end (bottom) */
+    height: 80vh; /* Adjust the height as needed */
+    padding: 20px;
+}
+
+.small-box {
+    padding: 20px;
+    background-color: rgba(13,17,22,255); /* Light grey background */
+    border: 1px solid #ccc; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow for depth */
+    width: 500px; /* Adjust width as needed */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out; /* Smooth transition for transform and margin */
+    position: absolute; /* Absolute positioning relative to its parent */
+    left: 50%; /* Shift to the left of the page by 50% of the parent width */
+    bottom: 30%; /* Shift towards the bottom by 30% of the parent height */
+    transform: translate(-50%, 30%); /* Adjust positioning to center and move down */
+    color: aliceblue;
+    font-size: x-large;
+}
+
+.small-box:hover {
+    transform: scale(1.05) translate(-50%, 30%); /* Maintain position adjustment on hover while enlarging */
+    margin: 0 15px; /* Add margin to act as a visual border */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Align icons vertically */
+    padding: 20px;
+    margin-top: 20px; /* Add some space above the container */
+    background-color: rgba(240,240,240,255); /* Light grey background */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    gap: 20px; /* Space between each icon */
+}
+
+.contact-icons a {
+    display: inline-flex; /* Make the anchor elements flex containers too */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Icons inherit the text color from parent */
+}
+
+.contact-icons img {
+    width: 40px; /* Set a standard width for icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
