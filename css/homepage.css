@@ -32,10 +32,6 @@ body {
     transition: color 0.3s ease-in-out;
   }
   
-  .nav-links li .active {
-    color: #4CAF50; /* Change as needed */
-  }
-
   
   .nav-links a:hover {
     color:rgba(27,32,29,255); /* Change color on hover */

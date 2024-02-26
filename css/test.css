@@ -1,168 +1,129 @@
-/* Flex Container */
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* Adjust this as needed */
-    padding: 5px;
-    gap: 5px; /* Space between flex items */
-    background-color: transparent; /* Example background color */
-    margin-top: 40px;
-    height: 50vh;
-  }
-  
-  /* Profile Card */
-  .profile-card {
-    width: 30%; /* Occupies 35% of the flex container */
-    text-align: center;
-    background-color: rgba(235,228,214,255);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align the items for smaller widths */
-  }
-  
-  .profile-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  /* Profile Photo */
-  .profile-photo {
-    width: 100%; /* Fixed size, adjust based on design needs */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 5px solid rgb(0, 0, 0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-card:hover .profile-photo {
-    transform: scale(1.05);
-  }
-  
-  
-  
-  /* Right Box CSS with Hover Effect */
-  .right-box {
-    width: 65%; /* Takes up the remaining space if the profile card is 35% */
-    background-color: rgba(255,255,245,255); /* Dark background for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover */
-  }
-  
-  .right-box:hover {
-    transform: translateY(-5px); /* Move up slightly on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-  }
-  
-  h2 {
-    font-family: 'Brush Script MT', cursive;
-    font-weight: bold;
-    color: rgba(160,135,116,255);
-    font-size: xx-large;
-  }
-  
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: regular;
-    color:rgba(151,135,116,255);
-  }
-  
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: regular;
-    color: rgba(6,20,28,255);
-  }
-
-/* ---------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------- */
-
-.flex-container2 {
-    margin-top: 2%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px; /* Creates space between flex items */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.box {
-    flex: 1; /* Makes each box take equal width */
-    padding: 20px; /* Padding inside each box */
-    text-align: center; /* Centers text inside the box */
-    height: 25vh;
-    background-color: rgba(255,255,245,1); /* Adjusted the alpha value to be between 0 and 1 */
-    display: flex;
-    justify-content: center; /* Center the inner box horizontally */
-    align-items: center; /* Center the inner box vertically */
-    position: relative; /* Ensures proper positioning of the inner box */
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto; /* Ensure only vertical scrolling is allowed */
+  margin: 20px 10px 0 30px; /* Adjusted margins */
+  width: calc(100vw - 40px); /* Compensate for margins */
+  height: 7vh; /* Adjust this based on the total height needed for exactly 3 rows of boxes */
+  background-color: rgba(13,17,22,255);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 10px; /* Padding inside the container */
+  font-size: xx-large;
+  color: rgb(255, 255, 150,1); /* Text color */
+  font-family: cursive;
+
 }
 
-.box:nth-child(odd) {
-    background-color: rgba(187,176,159,1); /* Specific color for odd boxes */
+.projfullscreen-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto; /* Ensure only vertical scrolling is allowed */
+  margin: 20px 10px 0 30px; /* Adjusted margins */
+  width: calc(100vw - 40px); /* Compensate for margins */
+  height: 70vh; /* Adjust this based on the total height needed for exactly 3 rows of boxes */
+  background-color: rgba(13,17,22,255);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 10px; /* Padding inside the container */
 }
 
-.inner-box {
-    width: 50%; /* Smaller width compared to the parent box */
-    height: 50%; /* Smaller height compared to the parent box */
-    background-color: #ccc; /* Different background color for visibility */
-    text-align: center; /* Centers text within the inner box */
-    padding: 10px; /* Padding inside the inner box */
-    border: 1px solid #999; /* Optional: adds a border for better visibility */
+.projsmall-box {
+  width: 30%; /* Adjust if necessary to fit within the container */
+  height: 20vh; /* Adjust based on the height of the container to fit 3 rows */
+  margin: 1%; /* Maintain a small margin between boxes */
+  background-color: rgba(255, 255, 245, 1);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+  background-size: 100% ;
+  background-position: center; /* Center the image within the box */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  position: relative;
 }
-  
-  .profile-card:hover .inner-box {
-    transform: scale(1.05);
-  }
+
+.projsmall-box a {
+  display: block; /* Make the link a block element */
+  width: 100%; /* Full width of the .projsmall-box */
+  height: 100%; /* Full height of the .projsmall-box */
+  position: absolute; /* Position it absolutely to cover the .projsmall-box area */
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0); /* Transparent background, can be omitted */
+  z-index: 10; /* Ensure it's above any other content in the box */
+}
+
+.projsmall-box1 {
+  background-image: url('../media/projects/2phase.png');
+}
+
+.projsmall-box2 {
+  background-image: url('../media/projects/webscrapper.png');
+}
+
+.projsmall-box3 {
+  background-image: url('../media/projects/connect4game.png');
+}
+
+.projsmall-box4 {
+  background-image: url('../media/projects/carzone.png');
+}
+
+.projsmall-box5 {
+  background-image: url('../media/projects/securedwebapp.png');
+}
+
+.projsmall-box6 {
+  background-image: url('../media/projects/hashcheck.png');
+}
+
+.projsmall-box7 {
+  background-image: url('../media/projects/distancevector.png');
+}
 
 
+.projsmall-box8 {
+  background-image: url('../media/projects/steps.png');
+}
 
+.projsmall-box9 {
+  background-image: url('../media/projects/locksysgo.png');
+}
 
-/* ---------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------- */
-  /* Add this to your styles.css file */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: rgba(255,255,245,255);
-  }
-  
-.navbar {
-    background-color: rgba(187,176,159,255); /* Light peach background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow to navbar */
-  }
-  
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Center navbar items horizontally */
-    align-items: center;
-    height: 60px; /* Set the height of the navbar */
-  }
-  
-.nav-links li {
-    padding: 0 20px; /* Add padding to each navbar item */
-  }
-  
-.nav-links a {
-    text-decoration: none;
-    color: rgba(255,252,252,255); /* Dark text for the links */
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-  }
-  
-.nav-links a:hover {
-    color:rgba(27,32,29,255); /* Change color on hover */
-  }
-  
+.projsmall-box10 {
+  background-image: url('../media/projects/memoryallo.png');
+}
+
+.projsmall-box11 {
+  background-image: url('../media/projects/restcalc.png');
+}
+
+.projsmall-box12 {
+  background-image: url('../media/projects/restwebapp.png');
+}
+
+.projsmall-box13 {
+  background-image: url('../media/projects/menu.png');
+}
+
+.projsmall-box14 {
+  background-image: url('../media/projects/database.png');
+}
+
+.projsmall-box15{
+  background-image: url('../media/projects/wireshark.png');
+}
+.projsmall-box:hover {
+  transform: scale(1.1);
+}

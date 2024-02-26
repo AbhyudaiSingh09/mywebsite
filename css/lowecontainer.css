@@ -40,11 +40,6 @@
 }
   
 
-
-.profile-card:hover .inner-box {
-    transform: scale(1.05);
-  }
-
 .img-rounded {
     border-radius: 20px;
   }
