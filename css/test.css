@@ -1,129 +1,50 @@
-body, html {
+/* Add this to your styles.css file */
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(255,255,245,255);
+  padding-top: 0.5px;
 }
 
 
-.banner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow-y: auto; /* Ensure only vertical scrolling is allowed */
-  margin: 20px 10px 0 30px; /* Adjusted margins */
-  width: calc(100vw - 40px); /* Compensate for margins */
-  height: 7vh; /* Adjust this based on the total height needed for exactly 3 rows of boxes */
-  background-color: rgba(13,17,22,255);
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
-  border: 5px solid black;
-  border-radius: 20px;
-  padding: 10px; /* Padding inside the container */
-  font-size: xx-large;
-  color: rgb(255, 255, 150,1); /* Text color */
-  font-family: cursive;
 
-}
 
-.projfullscreen-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow-y: auto; /* Ensure only vertical scrolling is allowed */
-  margin: 20px 10px 0 30px; /* Adjusted margins */
-  width: calc(100vw - 40px); /* Compensate for margins */
-  height: 70vh; /* Adjust this based on the total height needed for exactly 3 rows of boxes */
-  background-color: rgba(13,17,22,255);
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
-  border: 5px solid black;
-  border-radius: 20px;
-  padding: 10px; /* Padding inside the container */
-}
-
-.projsmall-box {
-  width: 30%; /* Adjust if necessary to fit within the container */
-  height: 20vh; /* Adjust based on the height of the container to fit 3 rows */
-  margin: 1%; /* Maintain a small margin between boxes */
-  background-color: rgba(255, 255, 245, 1);
-  transition: transform 0.5s ease-in-out;
-  border-radius: 10px;
-  background-size: 100% ;
-  background-position: center; /* Center the image within the box */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  position: relative;
-}
-
-.projsmall-box a {
-  display: block; /* Make the link a block element */
-  width: 100%; /* Full width of the .projsmall-box */
-  height: 100%; /* Full height of the .projsmall-box */
-  position: absolute; /* Position it absolutely to cover the .projsmall-box area */
+.navbar {
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0); /* Transparent background, can be omitted */
-  z-index: 10; /* Ensure it's above any other content in the box */
+  right: 0;
+  width: 100vw; /* Ensure navbar takes full viewport width */
+  background-color: rgba(13,17,22,255); /* Dark background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow to navbar */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
 }
 
-.projsmall-box1 {
-  background-image: url('../media/projects/2phase.png');
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center navbar items horizontally */
+  align-items: center;
+  height: 60px; /* Set the height of the navbar */
 }
 
-.projsmall-box2 {
-  background-image: url('../media/projects/webscrapper.png');
+.nav-links li {
+  padding: 0 20px; /* Add padding to each navbar item */
 }
 
-.projsmall-box3 {
-  background-image: url('../media/projects/connect4game.png');
-}
-
-.projsmall-box4 {
-  background-image: url('../media/projects/carzone.png');
-}
-
-.projsmall-box5 {
-  background-image: url('../media/projects/securedwebapp.png');
-}
-
-.projsmall-box6 {
-  background-image: url('../media/projects/hashcheck.png');
-}
-
-.projsmall-box7 {
-  background-image: url('../media/projects/distancevector.png');
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255,252,252,255); /* Dark text for the links */
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
 
-.projsmall-box8 {
-  background-image: url('../media/projects/steps.png');
-}
-
-.projsmall-box9 {
-  background-image: url('../media/projects/locksysgo.png');
-}
-
-.projsmall-box10 {
-  background-image: url('../media/projects/memoryallo.png');
-}
-
-.projsmall-box11 {
-  background-image: url('../media/projects/restcalc.png');
-}
-
-.projsmall-box12 {
-  background-image: url('../media/projects/restwebapp.png');
-}
-
-.projsmall-box13 {
-  background-image: url('../media/projects/menu.png');
-}
-
-.projsmall-box14 {
-  background-image: url('../media/projects/database.png');
-}
-
-.projsmall-box15{
-  background-image: url('../media/projects/wireshark.png');
-}
-.projsmall-box:hover {
-  transform: scale(1.1);
+.nav-links a:hover {
+  color:rgba(27,32,29,255); /* Change color on hover */
 }
