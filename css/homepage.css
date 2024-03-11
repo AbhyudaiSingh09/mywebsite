@@ -1,48 +1,162 @@
-/* Add this to your styles.css file */
 body {
+  background: linear-gradient(270deg,white, #ff8c00, #ff0080, #8A2BE2, #00BFFF, #ff8c00,black);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: rgba(255,255,245,255);
-  padding-top: 0.5px;
+  color: white;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 300px;
+  width: 600px; 
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@-webkit-keyframes AnimationName {
+  0%, 100% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+}
+
+@-moz-keyframes AnimationName {
+  0%, 100% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+}
+
+@keyframes AnimationName {
+  0%, 100% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw; /* Ensure navbar takes full viewport width */
-  background-color: rgba(13,17,22,255); /* Dark background */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add subtle shadow to navbar */
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  z-index: 1000; /* Ensures the navbar stays on top of other content */
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.1); 
+z-index: 100; /* Ensures the navbar is above other content */
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.navbar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center; /* Centers the navbar items horizontally */
+align-items: center;
+height: 60px; /* Adjust height as needed */
+}
+
+.navbar li {
+padding: 0 20px; /* Space between navbar items */
+}
+
+.navbar a {
+text-decoration: none;
+color: white; /* Text color, change as needed */
+font-size: 16px;
+font-family: cursive;
+font-size:large
+}
+
+.navbar a:hover {
+color: #232323; /* Highlight color on hover, change as needed */
+}
+
+.active {
+  color: #FFD700; /* Gold color for active state, change as needed */
+  font-weight: black;
 }
 
 
-.nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Center navbar items horizontally */
-  align-items: center;
-  height: 60px; /* Set the height of the navbar */
+/* Existing styles remain unchanged */
+
+.sliding-photo {
+position: fixed; /* Fixed position to stay in place while scrolling */
+bottom: 0; /* Start from the bottom */
+left: 0;
+width: 25%; /* Covers about 1/4 of the screen */
+z-index: 50; /* Ensure it's above the background but below the navbar */
+animation: slideUp 2s ease-out forwards; /* Animation named slideUp */
 }
 
-.nav-links li {
-  padding: 0 20px; /* Add padding to each navbar item */
+.sliding-photo img {
+width: 100%; /* Ensure the image covers the full width of its container */
+height: auto; /* Maintain aspect ratio */
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: rgba(255,252,252,255); /* Dark text for the links */
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
+@keyframes slideUp {
+from {
+    transform: translateY(100%); /* Start from below the screen */
+}
+to {
+    transform: translateY(0); /* End at its initial position */
+}
 }
 
+/* Ensure your other styles (navbar, etc.) remain unchanged */
+/* Add to your existing CSS */
 
-.nav-links a:hover {
-  color:rgba(27,32,29,255); /* Change color on hover */
+.about-me {
+position: fixed; /* Ensures the text stays put, similar to the photo */
+left: 40%; /* Adjust so it's to the right of the photo; may need fine-tuning */
+top: 20%; /* Adjust based on your layout needs */
+width: 70%; /* Ensures there's enough room for text; adjust as needed */
+color: white; /* Adjust text color as needed */
 }
+
+.about-me h1 {
+font-size: 5.5em; /* Big fonts for the name */
+margin-bottom: 0.5em; /* Adds some space between the name and the paragraph */
+}
+
+.about-me p {
+font-size: 1.5em; /* Adjust paragraph font size as needed */
+max-width: 600px; /* Ensures the paragraph is not too wide for readability */
+}
+
+.about-me h1:hover{
+color: #191919; /* Change color on hover */
+}
+
+.about-me p:hover{
+color: #191919; /* Change color on hover */
+}
+
+.social-icon {
+padding-top: 400px;
+text-decoration: none;
+color: white; /* Default icon color */
+font-size: 1.5em; /* Icon size, adjust as needed */
+margin: 0 10px; /* Spacing between icons */
+}
+
+/* Position the icons a bit above the bottom of the page */
+
+.about-me .social-icon {
+position: absolute;
+bottom: 0; /* Adjust distance from the bottom as needed */
+}
+
+.social-icon:hover {
+color: #191919; /* Change color on hover */
+}
+

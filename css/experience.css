@@ -1,130 +1,204 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    overflow: auto;
+}
 
-/* The actual timeline (the vertical ruler) */
+
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 100px 0;
   }
   
-  /* The actual timeline (the vertical ruler) */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color:black;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-  
-  /* Container around content */
-.container {
-    padding: 10px 40px;
+  .event {
+    padding-top: 5%;
     position: relative;
-    background-color: inherit;
-    width: 50%;
+    margin-bottom: 20px; /* Increased spacing between events for clarity */
   }
   
-  /* The circles on the timeline */
-.container::after {
-    content: '';
+  .event-icon {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
+    left: -17px; /* Center the icon on the timeline */
+    background-color: black; /* Main event icon color */
+    width: 30px; /* Slightly larger icon */
+    height: 30px; /* Slightly larger icon */
+    border-radius: 50%; /* Circular icon */
+    top: 5px; /* Align with the event content top */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    border: 3px solid #ffffff; /* Make icons stand out more */
+  }
+  
+  .event-content {
+    margin-left: 40px; /* Adjusted spacing */
+    padding: 15px 25px;
+    background: linear-gradient(145deg, #e7f0fd, #ffffff); /* Subtle gradient background */
+    border-radius: 8px; /* Rounded corners for content boxes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .event-content:hover {
+    transform: translateX(10px); /* Move content on hover for an interactive feel */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover for depth */
+  }
+  
+  .event-content h3, .event-content p {
+    margin: 10px 0; /* Adjusted spacing for readability */
+  }
+  
+  .event-content h3 {
+    color: #0056b3; /* A darker shade of blue for contrast */
+  }
+  
+  .event-content p {
+    color: #333; /* Darker text for readability */
   }
 
-  
-  /* Place the container to the left */
-.left {
-    left: -7%;
-  }
-  
-  /* Place the container to the right */
-.right {
-    left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 20px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px;
-  }
-  
-  /* The actual content */
-.content {
-    padding: 20px 30px;
-    background-color: rgba(13,17,22,255);
+  .timeline {
     position: relative;
-    border-radius: 6px;
-    color: aliceblue;
-  }
-
-  .timeline .container .content h4 p {
-    color: aliceblue; /* Adjust the color as needed */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures the line is in the center */
   }
   
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-    .timeline::after {
-    left: 31px;
-    }
-    
-    /* Full-width containers */
-    .container {
+  .event {
+    position: relative;
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-    }
-    
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-    }
+    display: flex;
+  }
+
+  .event.left .event-content,
+.event.right .event-content {
+  padding: 10px 20px;
+  background: #f9f9f9; /* Light background for content */
+  border-radius: 8px; /* Rounded corners for content boxes */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  position: relative;
+  width: 40%; /* Adjusts width of event content */
+  margin-left: 40px; /* Adjusted spacing */
+  margin-right: 40px; /* Adjusted spacing */
+}
+.event.left .event-content {
+    animation: slideInLeft 1.5s ease-out forwards;
+    margin-right: auto; /* Aligns left events to the left side */
+  }
   
-    /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-    left: 15px;
+  .event.right .event-content {
+    animation: slideInRight 1.5s ease-out forwards;
+    margin-left: auto; /* Aligns right events to the right side */
+  }  
+  .event-content {
+    padding: 10px 20px;
+    background: #f9f9f9; /* Light background for content */
+    border-radius: 8px; /* Rounded corners for content boxes */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    position: relative;
+    width: 40%; /* Adjusts width of event content */
+  }
+  
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  border-left: 2px solid black; /* Adjusted to black as per updated request */
+  top: 0;
+}
+
+  
+  .event-content h3, .event-content p {
+    margin: 5px 0; /* Adjusted spacing for readability */
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
     }
-    
-    /* Make all right containers behave like the left ones */
-    .right {
-    left: 0%;
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: 100; /* Ensures the navbar is above other content */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
+    
+    .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the navbar items horizontally */
+    align-items: center;
+    height: 60px; /* Adjust height as needed */
+    }
+    
+    .navbar li {
+    padding: 0 20px; /* Space between navbar items */
+    }
+    
+    .navbar a {
+    text-decoration: none;
+    color: white; /* Text color, change as needed */
+    font-size: 16px;
+    font-family: cursive;
+    font-size:large
+    }
+    
+    .navbar a:hover {
+    color: #232323; /* Highlight color on hover, change as needed */
+    }
+    
+    
+    
+    /* Existing styles remain unchanged */
+    
+    .sliding-photo {
+    position: fixed; /* Fixed position to stay in place while scrolling */
+    bottom: 0; /* Start from the bottom */
+    left: 0;
+    width: 25%; /* Covers about 1/4 of the screen */
+    z-index: 50; /* Ensure it's above the background but below the navbar */
+    animation: slideUp 2s ease-out forwards; /* Animation named slideUp */
+    }
+    
+    .sliding-photo img {
+    width: 100%; /* Ensure the image covers the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    }
+    
+    @keyframes slideUp {
+    from {
+        transform: translateY(100%); /* Start from below the screen */
+    }
+    to {
+        transform: translateY(0); /* End at its initial position */
+    }
+    }
+    

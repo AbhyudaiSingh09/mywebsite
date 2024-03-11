@@ -1,24 +1,149 @@
-.scroll {
-    max-width: 800px;
-    background: url('../media/scroll.jpg') no-repeat center center;
-    background-size: 100vh;
-    padding: 10px 10px;
-    font-family: 'Times New Roman', serif;
-    font-size: 20px;
-    color: #000000;
-    text-align: justify;
-    margin: 0 auto;
-    overflow: hidden;
-    font-weight: bolder;
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  /* New class for animation */
-  .animate-scroll {
-    animation: scrollUnveil 2s ease forwards;
+  body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, white, #ff8c00, #ff0080, #8A2BE2, #00BFFF, #ff8c00, black 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
-  @keyframes scrollUnveil {
-    from { max-height: 0; }
-    to { max-height: 2500px; } /* Adjust as necessary */
+  @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+  }
+  
+  .wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+  }
+  
+  .wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+  }
+  
+  @keyframes wave {
+    0%, 100% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+  
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 1.5s ease;
+    border: 2px solid #FFFFFF;
+  }
+  
+  .box1 {
+    z-index: 2;
+    border-radius: 20px;
+  }
+  
+  .box2 {
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .container:hover .box1 {
+    transform: translate(-100%, -50%);
+  }
+  
+  .container:hover .box2 {
+    transform: translate(0%, -50%);
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  
+  .about-me-desc p {
+    font-size: 1.5em; /* Adjust paragraph font size as needed */
+    max-width: 600px; /* Ensures the paragraph is not too wide for readability */
+    position: relative; /* Needed for animation and hover effects */
+    color: #000000; /* Default text color, change as needed */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    overflow: hidden; /* Ensures the contents are clipped to the boundary */
+  }
+  
+  /* Text shadow for depth */
+  .about-me-desc p {
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* Hover effect */
+  .about-me-desc p:hover {
+    color: #000000; /* Change to your preferred hover color */
+  }
+  
+  /* Animation - Fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .about-me-desc p {
+    animation: fadeIn 3s ease-out forwards;
   }
   

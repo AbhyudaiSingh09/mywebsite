@@ -1,24 +1,4 @@
 
-
-.banner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow-y: auto; /* Ensure only vertical scrolling is allowed */
-    margin: 20px 10px 0 30px; /* Adjusted margins */
-    width: calc(100vw - 40px); /* Compensate for margins */
-    height: 7vh; /* Adjust this based on the total height needed for exactly 3 rows of boxes */
-    background-color: rgba(13,17,22,255);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
-    border: 5px solid black;
-    border-radius: 20px;
-    padding: 10px; /* Padding inside the container */
-    font-size: xx-large;
-    color: rgb(255, 255, 150,1); /* Text color */
-    font-family: cursive;
-  
-  }
-  
   .projfullscreen-box {
     display: flex;
     flex-wrap: wrap;
