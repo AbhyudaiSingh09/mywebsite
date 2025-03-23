@@ -1,6 +1,6 @@
 body {
-  background: linear-gradient(270deg,white, #ff8c00, #ff0080, #8A2BE2, #00BFFF, #ff8c00,black);
-  background-size: 600% 600%;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* soft blue/gray tones */
+  background-size: 200% 200%;
   -webkit-animation: AnimationName 15s ease infinite;
   -moz-animation: AnimationName 15s ease infinite;
   animation: AnimationName 15s ease infinite;
@@ -9,17 +9,18 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  color: white;
+  color: #333; /* softer text color */
 }
 
 .profile-card {
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.15); 
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   height: 300px;
   width: 600px; 
+  backdrop-filter: blur(10px); /* adds a glassmorphism effect */
 }
 
 .profile-image {
@@ -28,6 +29,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
+  background: transparent; /* transparent background for image */
 }
 
 @-webkit-keyframes AnimationName {
@@ -46,117 +48,105 @@ body {
 }
 
 .navbar {
-position: fixed;
-top: 0;
-width: 100%;
-background: rgba(0, 0, 0, 0.1); 
-z-index: 100; /* Ensures the navbar is above other content */
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .navbar ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center; /* Centers the navbar items horizontally */
-align-items: center;
-height: 60px; /* Adjust height as needed */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 
 .navbar li {
-padding: 0 20px; /* Space between navbar items */
+  padding: 0 20px;
 }
 
 .navbar a {
-text-decoration: none;
-color: white; /* Text color, change as needed */
-font-size: 16px;
-font-family: cursive;
-font-size:large
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
 }
 
 .navbar a:hover {
-color: #232323; /* Highlight color on hover, change as needed */
+  color: #555;
 }
 
 .active {
-  color: #FFD700; /* Gold color for active state, change as needed */
-  font-weight: black;
+  color: #007BFF;
+  font-weight: bold;
 }
 
-
-/* Existing styles remain unchanged */
+/* Sliding photo stays the same, keeping transparency */
 
 .sliding-photo {
-position: fixed; /* Fixed position to stay in place while scrolling */
-bottom: 0; /* Start from the bottom */
-left: 0;
-width: 25%; /* Covers about 1/4 of the screen */
-z-index: 50; /* Ensure it's above the background but below the navbar */
-animation: slideUp 2s ease-out forwards; /* Animation named slideUp */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  z-index: 50;
+  animation: slideUp 2s ease-out forwards;
 }
 
 .sliding-photo img {
-width: 100%; /* Ensure the image covers the full width of its container */
-height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
+  background: transparent;
 }
 
 @keyframes slideUp {
-from {
-    transform: translateY(100%); /* Start from below the screen */
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
-to {
-    transform: translateY(0); /* End at its initial position */
-}
-}
-
-/* Ensure your other styles (navbar, etc.) remain unchanged */
-/* Add to your existing CSS */
 
 .about-me {
-position: fixed; /* Ensures the text stays put, similar to the photo */
-left: 40%; /* Adjust so it's to the right of the photo; may need fine-tuning */
-top: 20%; /* Adjust based on your layout needs */
-width: 70%; /* Ensures there's enough room for text; adjust as needed */
-color: white; /* Adjust text color as needed */
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  width: 70%;
+  color: #333;
 }
 
 .about-me h1 {
-font-size: 5.5em; /* Big fonts for the name */
-margin-bottom: 0.5em; /* Adds some space between the name and the paragraph */
+  font-size: 5em;
+  margin-bottom: 0.5em;
 }
 
 .about-me p {
-font-size: 1.5em; /* Adjust paragraph font size as needed */
-max-width: 600px; /* Ensures the paragraph is not too wide for readability */
+  font-size: 1.5em;
+  max-width: 600px;
 }
 
-.about-me h1:hover{
-color: #191919; /* Change color on hover */
-}
-
-.about-me p:hover{
-color: #191919; /* Change color on hover */
+.about-me h1:hover,
+.about-me p:hover {
+  color: #007BFF;
 }
 
 .social-icon {
-padding-top: 400px;
-text-decoration: none;
-color: white; /* Default icon color */
-font-size: 1.5em; /* Icon size, adjust as needed */
-margin: 0 10px; /* Spacing between icons */
+  padding-top: 400px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+  margin: 0 10px;
 }
 
-/* Position the icons a bit above the bottom of the page */
-
 .about-me .social-icon {
-position: absolute;
-bottom: 0; /* Adjust distance from the bottom as needed */
+  position: absolute;
+  bottom: 0;
 }
 
 .social-icon:hover {
-color: #191919; /* Change color on hover */
+  color: #007BFF;
 }
-
