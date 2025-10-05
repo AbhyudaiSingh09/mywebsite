@@ -1,70 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhyudai Singh</title>
-    <link rel="icon" href="../media/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/projects.css"> 
-    <link rel="stylesheet" href="../css/homepage.css"> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Abhyudai Singh</title>
+  <link rel="icon" href="../favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/base.css" />
 </head>
 <body>
-    
-  
-    <div class="projfullscreen-box">
-      <div class="projsmall-box projsmall-box1">
-        <a href="https://github.com/Axs7941/2phasecommit_protocol" target="_blank"></a>
-      </div>      
-        <div class="projsmall-box projsmall-box2">
-          <a href="https://github.com/Axs7941/webscrapper" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box3">
-          <a href="https://github.com/Axs7941/max4connect_game" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box4">
-          <a href="https://github.com/Axs7941/CarZone" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box5">
-          <a href="https://github.com/Axs7941/SharedSecuredServices" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box6">
-          <a href="https://github.com/Axs7941/MD5API_Header_hash_check-" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box7">
-          <a href="https://github.com/Axs7941/Distance_Vector_Socket_programming" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box8">
-          <a href="https://github.com/Axs7941/steps" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box9">
-          <a href="https://github.com/Axs7941/locksys" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box10">
-          <a href="https://github.com/Axs7941/Arena_allocator" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box11">
-          <a href="https://github.com/Axs7941/Rust_Calculator" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box12">
-          <a href="https://github.com/Axs7941/Rust_Webapp" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box13">
-          <a href="https://github.com/Axs7941/pizza_menu_frontend" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box14">
-          <a href="https://github.com/Axs7941/Database" target="_blank"></a>
-        </div>
-        <div class="projsmall-box projsmall-box15">
-          <a href="https://github.com/Axs7941/WireShark_Analysis" target="_blank"></a>
-        </div>
-      </div>
-      <nav class="navbar">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot"></span><span>Abhyudai Singh</span></a>
+      <nav aria-label="Site">
         <ul>
-            <li><a href="../index.html" class="active">Home</a></li>
-            <li><a href="../html/aboutme.html">About Me</a></li>
-            <li><a href="../html/experience.html">Timeline</a></li>
-            <li><a href="../html/projects.html">Projects</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./aboutme.html">About</a></li>
+          <li><a href="./experience.html">Timeline</a></li>
+          <li><a href="./projects.html" aria-current="page">Projects</a></li>
         </ul>
-      </nav> 
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Projects</h1>
+    <p class="lead">Selected work across systems, networking, and web apps. Each card links to the repo.</p>
+
+    <!-- switched to auto-fit grid for smoother wrapping -->
+    <div class="grid projects-grid">
+      <!-- Row 1 -->
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/2phase.png" alt="Two-Phase Commit demo screenshot" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Two-Phase Commit Protocol</h3>
+        <p>Implementation and demo of the 2PC consensus workflow for distributed transactions.</p>
+        <p><a href="https://github.com/Axs7941/2phasecommit_protocol" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Distributed</li><li>Consensus</li><li>Systems</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/webscrapper.png" alt="Web scraper pipeline UI" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Web Scraper</h3>
+        <p>Scraping pipeline with structured extraction and basic rate-limiting.</p>
+        <p><a href="https://github.com/Axs7941/webscrapper" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Python</li><li>Automation</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/connect4game.png" alt="Connect-4 game board" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Connect-4 Game</h3>
+        <p>Connect-4 with board logic and simple AI heuristics.</p>
+        <p><a href="https://github.com/Axs7941/max4connect_game" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Algorithms</li><li>Game</li></ul>
+      </article>
+
+      <!-- Row 2 -->
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/carzone.png" alt="CarZone listing app" loading="lazy" decoding="async" />
+        </figure>
+        <h3>CarZone</h3>
+        <p>Listing app foundation with CRUD flows and search.</p>
+        <p><a href="https://github.com/Axs7941/CarZone" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Web</li><li>Backend</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/securedwebapp.png" alt="Shared secured services architecture" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Shared Secured Services</h3>
+        <p>Auth-gated services with shared utilities and middleware.</p>
+        <p><a href="https://github.com/Axs7941/SharedSecuredServices" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Security</li><li>Services</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/hashcheck.png" alt="MD5 header hash check utility" loading="lazy" decoding="async" />
+        </figure>
+        <h3>MD5 Header Hash Check</h3>
+        <p>Validate payloads via MD5 checksum headers for integrity checks.</p>
+        <p><a href="https://github.com/Axs7941/MD5API_Header_hash_check-" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>APIs</li><li>Integrity</li></ul>
+      </article>
+
+      <!-- Row 3 -->
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/distancevector.png" alt="Distance vector routing simulation" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Distance-Vector Sockets</h3>
+        <p>Network routing simulation with a distance-vector algorithm over sockets.</p>
+        <p><a href="https://github.com/Axs7941/Distance_Vector_Socket_programming" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Networking</li><li>Sockets</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/steps.png" alt="Steps tracker prototype" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Steps</h3>
+        <p>Simple tracker—state updates and persistence prototype.</p>
+        <p><a href="https://github.com/Axs7941/steps" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>App</li><li>Data</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/locksysgo.png" alt="Locksys authorization primitives" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Locksys</h3>
+        <p>Locking/authorization primitives exploration for service endpoints.</p>
+        <p><a href="https://github.com/Axs7941/locksys" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Security</li><li>Systems</li></ul>
+      </article>
+
+      <!-- Row 4 -->
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/memoryallo.png" alt="Arena allocator memory layout" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Arena Allocator</h3>
+        <p>Fixed-region memory allocator for fast allocations/deallocations.</p>
+        <p><a href="https://github.com/Axs7941/Arena_allocator" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Memory</li><li>Low-level</li><li>Rust</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/restcalc.png" alt="CLI calculator" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Rust Calculator</h3>
+        <p>Command-line calculator parsing expressions and producing results.</p>
+        <p><a href="https://github.com/Axs7941/Rust_Calculator" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>CLI</li><li>Rust</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/restwebapp.png" alt="Rust web app starter" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Rust Web App</h3>
+        <p>Starter web app using a Rust web framework with routing and handlers.</p>
+        <p><a href="https://github.com/Axs7941/Rust_Webapp" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Web</li><li>Rust</li></ul>
+      </article>
+
+      <!-- Row 5 -->
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/menu.png" alt="Pizza menu UI" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Pizza Menu Frontend</h3>
+        <p>Frontend UI to browse menu items and add selections.</p>
+        <p><a href="https://github.com/Axs7941/pizza_menu_frontend" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Frontend</li><li>UI</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/database.png" alt="Relational database schemas" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Database</h3>
+        <p>Explorations in relational data modeling and queries.</p>
+        <p><a href="https://github.com/Axs7941/Database" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>SQL</li><li>Data</li></ul>
+      </article>
+
+      <article class="card project-card">
+        <figure class="thumb">
+          <img src="../media/projects/wireshark.png" alt="Packet capture analysis in Wireshark" loading="lazy" decoding="async" />
+        </figure>
+        <h3>Wireshark Analysis</h3>
+        <p>Packet capture analysis and protocol inspection write-ups.</p>
+        <p><a href="https://github.com/Axs7941/WireShark_Analysis" target="_blank" rel="noopener">GitHub</a></p>
+        <ul class="tags"><li>Networking</li><li>Diagnostics</li></ul>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">© <span id="y3"></span> Abhyudai Singh</footer>
+  <script>document.getElementById('y3').textContent = new Date().getFullYear();</script>
 </body>
 </html>

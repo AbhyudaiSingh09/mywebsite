@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhyudai Singh</title>
-    <link rel="icon" href="../media/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../css/aboutme.css">
-    <link rel="stylesheet" href="../css/homepage.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Abhyudai Singh</title>
+  <link rel="icon" href="../favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/base.css" />
 </head>
 <body>
-
-    <div class="sliding-photo">
-        <img src="../media/aboutme.png" alt="Sliding Photo"> 
-    </div>
-
-    <div class="about-me-desc">
-        <p>A results-driven Software Engineer based in Austin, TX, with over six years of experience specializing in backend development, cloud-native applications, and data-intensive systems. I have a strong technical foundation in Go, Python (FastAPI, Flask, Django), Rust, and C, combined with expertise in AWS, Kubernetes, Docker, and CI/CD automation. My career spans impactful roles at OneMind Services, Incept Data Solutions, Capgemini, and Spectra, where I have built and deployed scalable microservices, optimized big data workflows with Apache Spark and PySpark, and automated infrastructure using modern DevOps practices. I thrive in dynamic, distributed teams, consistently delivering robust solutions that enhance system performance, reliability, and scalability. Passionate about continuous learning and innovation, I am committed to solving complex challenges and driving business value through technology.</p>
-    </div>
-    <nav class="navbar">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="dot"></span><span>Abhyudai Singh</span></a>
+      <nav aria-label="Site">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../html/aboutme.html">About Me</a></li>
-            <li><a href="../html/experience.html">Timeline</a></li>
-            <li><a href="../html/projects.html">Projects</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./aboutme.html" aria-current="page">About</a></li>
+          <li><a href="./experience.html">Timeline</a></li>
+          <li><a href="./projects.html">Projects</a></li>
         </ul>
-      </nav> 
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <div class="page-hero__copy">
+        <h1>About</h1>
+        <p class="lead">Results-driven software engineer in Austin, TX. I build backend and systems software with <strong>Go</strong>, <strong>Python</strong> (FastAPI/Flask/Django), and <strong>Rust</strong>, and ship on <strong>AWS</strong> with containers and Kubernetes. I care about reliability, performance, and clear interfaces.</p>
+      </div>
+      <figure class="page-hero__media"><img src="../media/aboutme.png" alt="Abhyudai Singh" loading="lazy" /></figure>
+    </section>
+
+    <section class="card stack-lg">
+      <h2>What I do</h2>
+      <ul class="checklist">
+        <li>Design and implement scalable microservices and background workers.</li>
+        <li>Automate infrastructure (Terraform, GitHub Actions) and CI/CD pipelines.</li>
+        <li>Build data pipelines with Spark/PySpark; integrate Kafka for event streams.</li>
+        <li>Improve reliability with auth hardening, secret rotation, and observability.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">© <span id="y"></span> Abhyudai Singh</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

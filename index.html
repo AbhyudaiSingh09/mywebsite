@@ -1,46 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhyudai Singh</title>
-    <link rel="icon" href="./favicon.png" type="image/png">
-    <link rel="stylesheet" href="./css/homepage.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhyudai Singh — Software Developer</title>
+  <meta name="description" content="Backend & systems developer (Python, Go, Rust). Building reliable services, automation, and cloud-native systems." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Abhyudai Singh — Software Developer" />
+  <meta property="og:description" content="Backend & systems developer (Python, Go, Rust). Building reliable services, automation, and cloud-native systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example" />
+  <meta property="og:image" content="./media/photo_prev_ui.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="./favicon.png" type="image/png" />
+  <link rel="preload" as="image" href="./media/photo_prev_ui.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKVBCEGe86X1f9+Z/Sc9v6rY1wRrV0Y5x1R8e6YV7q4VChSR7x9WbWQ1R2LZz1hKQ6V+KQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/base.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abhyudai Singh",
+    "jobTitle": "Software Developer",
+    "url": "https://your-domain.example",
+    "email": "mailto:abhyudaisingh09@gmail.com",
+    "telephone": "+1-817-936-0342",
+    "sameAs": [
+      "https://github.com/AbhyudaiSingh09",
+      "https://www.linkedin.com/in/abhyudaisingh09/"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Home"><span class="dot" aria-hidden="true"></span><span>Abhyudai Singh</span></a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="./html/aboutme.html">About</a></li>
+          <li><a href="./html/experience.html">Timeline</a></li>
+          <li><a href="./html/projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn" href="https://drive.google.com/file/d/1sAFrQnwo7_ekz__K6kg5lmKzjnT4U0Mq/view?usp=sharing" target="_blank" rel="noopener">Résumé</a>
+        <a class="btn" href="mailto:abhyudaisingh09@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
 
+  <main id="home" class="container">
+    <section class="hero" aria-labelledby="intro-title">
+      <div>
+        <h1 id="intro-title">Backend & Systems Developer</h1>
+        <p class="lead">I design and build reliable services, developer tooling, and automation. 6+ years across Python, Go, and Rust with a focus on backend APIs, process automation, cloud infrastructure, and system design.</p>
 
+        <div class="bullets" aria-label="Core skills">
+          <span class="chip">Python</span><span class="chip">Go</span><span class="chip">Rust</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS</span>
+        </div>
+        <!-- socials removed from here -->
+      </div>
 
-<div class="sliding-photo">
-  <img src="./media/photo_prev_ui.png" alt="Sliding Photo"> 
-</div>
+      <figure class="portrait" aria-label="Portrait">
+        <img src="./media/photo_prev_ui.png" alt="Abhyudai Singh portrait" loading="lazy" width="800" height="1000" />
+        <div class="glow" aria-hidden="true"></div>
+      </figure>
+    </section>
 
+    <section id="about">
+      <div class="card">
+        <h2>About</h2>
+        <p>I craft resilient backend services and tools that help teams ship faster and safer. Recent work spans API platforms, background job systems, data pipelines, and IaC. I value clear interfaces, operational excellence, and thoughtful documentation.</p>
+      </div>
+    </section>
 
+    <section id="experience">
+      <div class="grid">
+        <div class="card col-6">
+          <h3>Highlights</h3>
+          <div class="list">
+            <div class="list-item"><i class="fas fa-bolt"></i><p>Orchestrated job service handling 5M+ tasks/month with retries and DLQs.</p></div>
+            <div class="list-item"><i class="fas fa-cloud"></i><p>Migrated services to Kubernetes with GitOps and full observability.</p></div>
+            <div class="list-item"><i class="fas fa-shield-alt"></i><p>Hardened auth (OAuth2/OIDC) and automated secret rotation via AWS KMS/SSM.</p></div>
+          </div>
+        </div>
+        <div class="card col-6">
+          <h3>Tooling</h3>
+          <div class="list">
+            <div class="list-item"><i class="fas fa-code"></i><p>Python (FastAPI), Go (chi/fiber), Rust (axum/tokio)</p></div>
+            <div class="list-item"><i class="fas fa-database"></i><p>PostgreSQL, Redis, Kafka/RabbitMQ</p></div>
+            <div class="list-item"><i class="fas fa-tools"></i><p>Docker, Kubernetes, Terraform, GitHub Actions</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="about-me">
-  <h1>ABHYUDAI SINGH</h1> 
-  <p>A developing software developer with over 6 years of experience in languages like Python, Go and RUST with proven track record in backend development, process automation, system design and Cloud technologies.</p>
-</div>
+    <section id="contact">
+      <div class="card col-12">
+        <h2>Contact</h2>
+        <p>Open to backend, platform, and infrastructure roles. The best way to reach me is email.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:abhyudaisingh09@gmail.com">Email Me</a>
+          <a class="btn" href="tel:+18179360342">Call/Text</a>
+          <a class="btn" href="https://github.com/AbhyudaiSingh09">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/abhyudaisingh09/">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<nav class="navbar">
-  <ul>
-      <li><a href="./index.html" class="active">Home</a></li>
-      <li><a href="./html/aboutme.html">About Me</a></li>
-      <li><a href="./html/experience.html">Timeline</a></li>
-      <li><a href="./html/projects.html">Projects</a></li>
-  </ul>
-</nav> 
+  <footer class="site-footer">
+    <div class="container">© <span id="y"></span> Abhyudai Singh</div>
+  </footer>
 
-
-<div class="social-icon">
-  <a href="https://github.com/AbhyudaiSingh09" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-  <a href="https://www.linkedin.com/in/abhyudaisingh09/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-  <a href="mailto:abhyudaisingh09@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-  <a href="tel:+18179360342" class="social-icon"><i class="fas fa-phone"></i></a>
-  <a href="https://drive.google.com/file/d/1RbrAiauDxb8Y755MywAWYXibOHog5Fi2/view?usp=sharing" target="_blank" class="social-icon"><i class="fas fa-file-alt"></i></a>
-</div>
-
-
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
