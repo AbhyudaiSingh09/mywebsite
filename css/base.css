@@ -1,0 +1,156 @@
+/* Base design shared across pages (dark/light aware) */
+:root{
+  --bg:#0b0c10; --card:#111216; --text:#e8eaed; --muted:#a1a8b3;
+  --brand:#6cf0a8; --brand2:#6cb9f0; --border:#1d1f25;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f7f8fa; --card:#fff; --text:#0b0c10; --muted:#495265; --border:#e7e8ec; }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background:
+    radial-gradient(1200px 800px at 80% -10%, rgba(108,185,240,.18), transparent 60%),
+    radial-gradient(1000px 700px at -10% 10%, rgba(108,240,168,.18), transparent 60%),
+    var(--bg);
+  color:var(--text); line-height:1.6
+}
+.container{width:min(1050px,92vw); margin-inline:auto}
+
+/* Header / Nav */
+.site-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px);
+  background:color-mix(in oklab,var(--bg) 85%, transparent); border-bottom:1px solid var(--border)}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:flex; gap:.7rem; align-items:center; font-weight:700; letter-spacing:.4px; color:var(--text); text-decoration:none}
+.brand .dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,var(--brand),var(--brand2));
+  box-shadow:0 0 16px color-mix(in oklab,var(--brand),white 20%)}
+nav ul{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+nav a{display:block; padding:.5rem .8rem; text-decoration:none; color:var(--text); border:1px solid transparent; border-radius:12px}
+nav a:hover{border-color:var(--border); background:color-mix(in oklab,var(--card) 70%, transparent)}
+.cta{display:flex; gap:.6rem}
+.btn{border:1px solid var(--border); background:linear-gradient(180deg, color-mix(in oklab, var(--card) 70%, transparent), var(--card));
+  color:var(--text); padding:.55rem .9rem; border-radius:12px; text-decoration:none; box-shadow:var(--shadow)}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg, color-mix(in oklab, var(--brand) 86%, white 10%), color-mix(in oklab, var(--brand2) 86%, white 10%));
+  color:#08130e; border-color:transparent}
+
+/* Hero */
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:2.2rem; align-items:center; padding:48px 0 24px}
+h1{font-size: clamp(2rem, 3.2vw + .6rem, 3.2rem); line-height:1.1; margin:0 0 .6rem}
+.lead{font-size: clamp(1rem, 1.2vw + .6rem, 1.25rem); color:var(--muted); margin:0 0 1.2rem}
+.bullets{display:flex; gap:.6rem; flex-wrap:wrap; margin:0 0 1.2rem}
+.chip{border:1px dashed var(--border); padding:.35rem .6rem; border-radius:999px; font-size:.9rem; color:var(--muted)}
+.portrait{position:relative; aspect-ratio:4/5; border-radius:22px; overflow:hidden; border:1px solid var(--border);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 85%, transparent), var(--card)); box-shadow:var(--shadow)}
+.portrait img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.02)}
+.glow{position:absolute; inset:auto auto 6% -10%; width:70%; height:40%; background:radial-gradient(closest-side, color-mix(in oklab, var(--brand), white 10%), transparent); filter:blur(24px); opacity:.6; pointer-events:none}
+
+/* Socials (general) */
+.actions{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:8px}
+.socials{display:flex; gap:.8rem; margin-top:14px}
+.socials a{
+  width:38px; height:38px; display:grid; place-items:center; border-radius:12px;
+  border:1px solid var(--border); text-decoration:none; color:var(--text); background:var(--card)
+}
+.socials a:hover{transform:translateY(-1px)}
+
+/* Sections / Cards / Grid */
+section{padding:36px 0}
+.card{border:1px solid var(--border); background: var(--card); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
+.grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:14px}
+.col-4{grid-column: span 4} .col-6{grid-column: span 6} .col-12{grid-column: 1 / -1}
+.list{display:grid; gap:12px}
+.list-item{display:flex; gap:12px; align-items:flex-start}
+.list-item i{margin-top:3px; color:var(--brand2)}
+.tags{display:flex; gap:.4rem; list-style:none; padding:0; margin:.6rem 0 0}
+.tags li{border:1px dashed var(--border); padding:.25rem .5rem; border-radius:999px; font-size:.9rem; color:var(--muted)}
+
+/* Page hero (inner pages) */
+.page-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center; padding:34px 0}
+.page-hero__media{border:1px solid var(--border); border-radius:18px; overflow:hidden; background:var(--card); box-shadow:var(--shadow)}
+.page-hero__media img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* Timeline */
+.timeline{list-style:none; padding-left:0; position:relative; margin:28px 0}
+.timeline::before{content:""; position:absolute; left:12px; top:0; bottom:0; width:2px; background:linear-gradient(var(--brand), var(--brand2))}
+.timeline__item{position:relative; padding-left:40px; margin-bottom:18px}
+.timeline__dot{position:absolute; left:6px; top:.65rem; width:12px; height:12px; border-radius:999px; background:linear-gradient(135deg,var(--brand),var(--brand2));
+  box-shadow:0 0 0 3px color-mix(in oklab, var(--card) 85%, transparent)}
+.timeline__header{display:flex; justify-content:space-between; align-items:baseline; gap:1rem; margin-bottom:.4rem}
+.stack{color:var(--muted); margin-top:.5rem}
+
+/* Footer */
+.site-footer{padding:32px 0 50px; color:var(--muted); text-align:center}
+
+/* Responsive */
+@media (max-width: 860px){
+  nav ul{display:none}
+  .hero{grid-template-columns: 1fr}
+  .page-hero{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .col-4,.col-6{grid-column:1/-1}
+  .timeline__header{flex-direction:column; align-items:flex-start; gap:.2rem}
+}
+
+/* ===================== PROJECTS (compact thumbs) ===================== */
+.projects-grid{
+  /* auto-fit keeps 3-up/2-up/1-up gracefully */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.project-card{ display:flex; flex-direction:column; padding:16px; }
+
+/* compact fixed-height thumb */
+.project-card .thumb{
+  height: clamp(120px, 16vw, 150px);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--card);
+  box-shadow:var(--shadow);
+  margin:0 0 10px 0;
+}
+.project-card .thumb img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transform:scale(1.01); transition:transform .25s ease;
+}
+.project-card:hover .thumb img{ transform:scale(1.04); }
+
+/* compact text to match small cards */
+.project-card h3{ font-size:1.05rem; margin:.35rem 0 .25rem; }
+.project-card p{  margin:.3rem 0; }
+.project-card .tags li{ font-size:.8rem; }
+
+/* === Contact section socials fix === */
+#contact .socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;       /* horizontally center inside the card */
+  gap: 1rem;
+}
+
+#contact .socials a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff !important;      /* force white for the icon */
+  font-size: 1.3rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#contact .socials a i {
+  color: #ffffff !important;      /* ensure the <i> icon stays white */
+}
+
+#contact .socials a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+
+#contact .socials i{ line-height:1; } /* crisp FA glyphs */
